@@ -1,0 +1,39 @@
+spring:
+  security:
+    oauth2:
+      authorization-server:
+        issuer: http://localhost:8080
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banking
+    username: postgres
+    password: WxzLvtU7Ah25
+    hikari:
+      data-source-properties:
+        encrypt: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+        order_inserts: true
+        order_updates: true
+        jdbc.batch_versioned_data: true
+        session_factory:
+          batch_fetch_size: 500
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.security: ERROR
+    org.springframework.web: ERROR
+    org.springframework.security.web.FilterChainProxy: ERROR
+    org.springframework.security.oauth2: ERROR
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql: ERROR
+
+client:
+  client-id: 3f5a21d8-84b1-4e7c-b43e-1b02d9c7ef8a
+  client-secret: bP9@cZ!6qL#vF2jD$hXt
+

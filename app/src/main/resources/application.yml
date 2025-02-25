@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: test
+    include: mock-banking, psd2
+  jackson:
+    serialization:
+      write-bigdecimal-as-plain: true
+
+validators:
+  config:
+    enabledIbanValidator: true
+
+externalBanking:
+  config:
+    baseUrl: http://localhost:8080
+    ibanExistsUrl: /mock/accounts/{accountId}
+    accountBalanceUrl: /mock/accounts/{accountId}/balance
+    transactionsUrl: /mock/accounts/{accountId}/transactions
+    paymentsUrl: /mock/payments/initiate
