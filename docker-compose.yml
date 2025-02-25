@@ -8,10 +8,3 @@ services:
       POSTGRES_PASSWORD: WxzLvtU7Ah25
     ports:
       - "5432:5432"
-    networks:
-      - sphynx-network
-
-
-networks:
-  sphynx-network:
-    driver: bridge
