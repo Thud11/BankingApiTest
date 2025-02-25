@@ -6,10 +6,6 @@ import com.banking.utils.ResourceLoaderUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -17,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Profile("test")
 @Slf4j
 @RequiredArgsConstructor
 public class SandboxInitializer  {
